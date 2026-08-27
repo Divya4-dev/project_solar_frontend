@@ -1,0 +1,192 @@
+.footer {
+    background-color: #0f172a;
+    /* Very dark slate blue/black background */
+    color: #cbd5e1;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    padding: 85px 0 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Col 1 stylings */
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.logoIcon {
+    width: 60px;
+    height: 48px;
+}
+
+.logoTextWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.logoTitle {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.logoSubtitle {
+    font-size: 10px;
+    font-weight: 700;
+    color: #8ed002;
+    letter-spacing: 0.5px;
+}
+
+.aboutText {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0 0 25px;
+}
+
+.socials {
+    display: flex;
+    gap: 12px;
+}
+
+.socialIcon {
+    width: 38px;
+    height: 38px;
+    background-color: #1e293b;
+    border-radius: 50%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.socialIcon:hover {
+    background-color: #8ed002;
+}
+
+/* Standard Col styling */
+.footerTitle {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 25px;
+    position: relative;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.list a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.list a:hover {
+    color: #ffffff;
+}
+
+/* Contact List styling */
+.contactList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #94a3b8;
+}
+
+.contactItem a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contactItem a:hover {
+    color: #ffffff;
+}
+
+.contactIcon {
+    margin-top: 3px;
+    color: #8ed002;
+    /* Lime green icons in footer */
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* Bottom copyright bar */
+.bottomBar {
+    max-width: 100vw;
+    border-top: 1px solid #1e293b;
+    padding: 27px 0;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .logoContainer {
+        justify-content: center;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .contactItem {
+        justify-content: center;
+    }
+}

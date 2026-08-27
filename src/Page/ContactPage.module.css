@@ -1,0 +1,221 @@
+.pageWrapper {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Contact Intro section styles */
+.contactIntro {
+    padding: 60px 0 30px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.introHeading {
+    font-size: 44px;
+    font-weight: 800;
+    color: #72a904;
+    /* Lime green color */
+    margin: 0 0 25px;
+}
+
+.introTex {
+    font-size: 15.5px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #666666;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* Cards Info Section */
+.infoSection {
+    background-color: #ffffff;
+    padding: 20px 0 60px;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.infoCard {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 50px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    min-height: 290px;
+}
+
+.iconCircle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Specific icon circle colors to look premium */
+.infoCard:nth-child(1) .iconCircle {
+    background-color: transparent;
+}
+
+.infoCard .iconCircle svg {
+    font-size: 80px;
+    color: #132247;
+}
+
+.cardTitle {
+    font-size: 20px;
+    font-weight: 800;
+    color: #132247;
+    margin: 0 0 15px;
+}
+
+.cardContent {
+    font-size: 14.5px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+    max-width: 250px;
+}
+
+/* Map & Form Section */
+.mapFormSection {
+    background-color: #ffffff;
+    padding: 40px 0 100px;
+}
+
+.mapFormGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: stretch;
+}
+
+.mapContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mapContainer iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.formHeading {
+    font-size: 40px;
+    font-weight: 800;
+    color: #72a904;
+    /* Lime green color */
+    margin: 0 0 35px;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.formField input {
+    width: 100%;
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+    font-size: 14.5px;
+    color: #333333;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.formField input:focus {
+    border-color: #72a904;
+}
+
+.textareaField textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+    font-size: 14.5px;
+    color: #333333;
+    background-color: #ffffff;
+    outline: none;
+    resize: none;
+    transition: border-color 0.2s ease;
+}
+
+.textareaField textarea:focus {
+    border-color: #72a904;
+}
+
+.submitBtn {
+    background-color: #132247;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 14px 40px;
+    font-size: 15px;
+    font-weight: 750;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.2s ease;
+}
+
+.submitBtn:hover {
+    background-color: #0d1833;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    .infoGrid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .infoCard {
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .mapFormGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .mapContainer iframe {
+        min-height: 380px;
+    }
+}

@@ -1,0 +1,402 @@
+.pageWrapper {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #333333;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Scroll Reveal Wrapper */
+.revealWrapper {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1),
+        transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.revealActive {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Residential Hero */
+.heroSection {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 180px 0 160px;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.heroTitle {
+    font-size: 38px;
+    font-weight: 850;
+    line-height: 1.3;
+    margin: 0 0 20px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    /* Explicit white color mapping */
+}
+
+/* Fade in + slide up from bottom to top with 1s delay */
+.heroSubtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 35px;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 1s;
+}
+
+/* The content below (the button) follows same animation style with 1.3s delay */
+.heroBtn {
+    background-color: #6da203;
+    /* Lime green */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    box-shadow: 0 4px 15px rgba(109, 162, 3, 0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 1.3s;
+}
+
+.heroBtn:hover {
+    background-color: #5b8702;
+}
+
+/* Keyframes for Hero entry */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Highlights Grid */
+.highlightsSection {
+    background-color: #ffffff;
+    padding: 70px 0;
+}
+
+.highlightsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: -120px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 50px 40px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 10;
+}
+
+.highlightCard {
+    text-align: center;
+    padding: 10px;
+}
+
+.highlightIcon {
+    font-size: 40px;
+    color: #131e42;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.highlightTitle {
+    font-size: 21px;
+    font-weight: 700;
+    color: #131e42;
+    margin: 0 0 15px;
+}
+
+.highlightDesc {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #666666;
+    margin: 0;
+}
+
+/* Design & Survey Section */
+.surveySection {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+.surveyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.surveyLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.surveyHeading {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #131e42;
+    margin: 0 0 30px;
+}
+
+.surveyText {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555555;
+    margin: 0 0 20px;
+}
+
+.surveyText:last-of-type {
+    margin-bottom: 0;
+}
+
+.surveyRight {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Dotted background decorator */
+.gridDecorator {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: -20px;
+    bottom: -30px;
+    background-image: radial-gradient(#ccc 2px, transparent 2px);
+    background-size: 15px 15px;
+    z-index: 1;
+}
+
+/* Beautiful overlapping image stack from reference styling */
+.imageStack {
+    position: relative;
+    height: 480px;
+    width: 100%;
+    max-width: 500px;
+    z-index: 2;
+}
+
+.techImageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    z-index: 2;
+}
+
+.sunsetImgContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 75%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    z-index: 3;
+}
+
+.badgeOrange {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background-color: #f7941d;
+    padding: 20px 25px;
+    border-radius: 6px;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(247, 148, 29, 0.35);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.badgeNumber {
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0 0 5px;
+    line-height: 1;
+}
+
+.badgeText {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.surveyImage {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Why Choose Us Section */
+.whyChooseSection {
+    background-color: #f9fbfd;
+    padding: 95px 0 110px;
+}
+
+.whyHeader {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.whySubtitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #6da203;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.whyTitle {
+    font-size: 32px;
+    font-weight: 800;
+    color: #131e42;
+    margin: 0 0 20px;
+    line-height: 1.3;
+}
+
+.whyIntro {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0;
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.benefitCard {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.benefitCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.benefitIcon {
+    font-size: 32px;
+    color: #131e42;
+    margin-bottom: 25px;
+    display: flex;
+}
+
+.benefitTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #131e42;
+    margin: 0 0 15px;
+    line-height: 1.4;
+}
+
+.benefitDesc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #666666;
+    margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .highlightsGrid {
+        padding: 40px 25px;
+        gap: 25px;
+    }
+
+    .benefitsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .heroTitle {
+        font-size: 30px;
+    }
+
+    .highlightsGrid {
+        grid-template-columns: 1fr;
+        margin-top: -80px;
+        gap: 30px;
+    }
+
+    .surveyGrid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .surveyHeading {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .surveyText {
+        text-align: center;
+    }
+
+    .imageStack {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .whyTitle {
+        font-size: 26px;
+    }
+}

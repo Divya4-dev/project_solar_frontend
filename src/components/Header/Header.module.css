@@ -1,0 +1,74 @@
+.topbar {
+    background-color: #131e42;
+    /* Dark blue color matching screenshot */
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactInfo {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.infoLink {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.2s;
+    font-weight: 500;
+}
+
+.infoLink:hover {
+    opacity: 0.8;
+}
+
+.icon {
+    font-size: 13px;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.socialLink {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.socialLink:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .contactInfo {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

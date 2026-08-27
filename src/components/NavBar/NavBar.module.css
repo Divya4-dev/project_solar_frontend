@@ -1,0 +1,163 @@
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoSection {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.logoIcon {
+    flex-shrink: 0;
+}
+
+.logoTextContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.logoSsb {
+    font-size: 26px;
+    font-weight: 800;
+    color: #131e42;
+    line-height: 1;
+    letter-spacing: 0.5px;
+}
+
+.logoSolar {
+    font-size: 11px;
+    font-weight: 700;
+    color: #70a401;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #131e42;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+    padding: 8px 0;
+}
+
+.navLink:hover {
+    color: #ff2c54;
+}
+
+.activeLink {
+    color: #ff2c54 !important;
+    /* Active link color in the design (Pink/Magenta) */
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+}
+
+.getQuoteBtn {
+    background-color: #6da203;
+    /* Olive/Lime Green in screenshot */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.getQuoteBtn:hover {
+    background-color: #5b8702;
+    transform: translateY(-1px);
+}
+
+.mobileMenuToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #131e42;
+    cursor: pointer;
+}
+
+.mobileOnlyButton {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .navLinks {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .mobileMenuToggle {
+        display: block;
+    }
+
+    .buttonContainer {
+        display: none;
+    }
+
+    .navLinks {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 20px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    .navLinksActive {
+        display: flex !important;
+    }
+
+    .mobileOnlyButton {
+        display: block;
+        width: 80%;
+        text-align: center;
+    }
+
+    .getQuoteBtnMobile {
+        display: block;
+        background-color: #6da203;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 12px;
+        border-radius: 4px;
+    }
+}

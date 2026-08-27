@@ -1,0 +1,90 @@
+.achieveSection {
+    background-color: #0b375b;
+    /* Solid blue banner background */
+    padding: 70px 0;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    position: relative;
+    /* subtle gradient/pattern overlay */
+    background-image: linear-gradient(rgba(11, 55, 91, 0.95), rgba(11, 55, 91, 0.98));
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0 0 20px;
+    word-spacing: 1px;
+    color: #ffffff;
+}
+
+.desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #dce7f3;
+    margin: 0 0 50px;
+}
+
+.statsGrid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.statItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statNumber {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.statLabel {
+    font-size: 15px;
+    font-weight: 600;
+    color: #dce7f3;
+}
+
+.divider {
+    height: 70px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .statsGrid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .statNumber {
+        font-size: 40px;
+    }
+}

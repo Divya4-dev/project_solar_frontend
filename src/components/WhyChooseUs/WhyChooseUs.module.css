@@ -1,0 +1,150 @@
+.whySection {
+    background-color: #ffffff;
+    padding: 80px 0;
+    color: #333333;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.imageColumn {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.animateLeft {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.imageWrapper {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contentColumn {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.animateRight {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+.headingTitle {
+    font-size: 38px;
+    font-weight: 800;
+    color: #131e42;
+    margin: 0 0 20px;
+}
+
+.highlight {
+    color: #6da203;
+    /* Green accent color */
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 35px;
+}
+
+.metricsList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.metricItem {
+    width: 100%;
+}
+
+.metricHeader {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    color: #131e42;
+    margin-bottom: 8px;
+}
+
+.metricLabel {
+    letter-spacing: 0.5px;
+}
+
+.metricVal {
+    color: #131e42;
+}
+
+.barBackground {
+    height: 16px;
+    background-color: #dbe2e9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    background-color: #0b375b;
+    /* Dark blue progress bar */
+    border-radius: 4px;
+    transition: width 1.2s cubic-bezier(0.1, 0.8, 0.3, 1);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .imageColumn {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .headingTitle {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .description {
+        text-align: center;
+    }
+}

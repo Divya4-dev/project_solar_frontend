@@ -1,0 +1,205 @@
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(19, 30, 66, 0.75) 0%, rgba(19, 30, 66, 0.4) 100%);
+    z-index: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.content {
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.title {
+    font-size: 47px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0 0 25px;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+.boldTitle {
+    font-weight: 800;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    opacity: 0.95;
+    font-weight: 400;
+    color: #f1f2f6;
+}
+
+.bookBtn {
+    background-color: #0b375b;
+    /* Dark Blue from button */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s, transform 0.1s;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.bookBtn:hover {
+    background-color: #082843;
+    transform: translateY(-1px);
+}
+
+.bookIcon {
+    font-size: 18px;
+}
+
+/* Consultation Form Styling */
+.formContainer {
+    width: 400px;
+    background-color: #6da203;
+    /* Lime Green matching screenshot container */
+    border-radius: 20px;
+    /* Highly rounded corners */
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 2px solid #5b8702;
+    margin-left: 20px;
+}
+
+.formHeader {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 25px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.input {
+    background-color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #333333;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input::placeholder {
+    color: #777777;
+}
+
+.input:focus {
+    border-color: #131e42;
+    box-shadow: 0 0 5px rgba(19, 30, 66, 0.2);
+}
+
+.submitBtn {
+    background-color: #000000;
+    /* Black background matching screenshot button */
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+
+.submitBtn:hover {
+    background-color: #222222;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 40px 0;
+        min-height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: stretch;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .bookBtn {
+        margin: 0 auto;
+    }
+
+    .formContainer {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}

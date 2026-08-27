@@ -1,0 +1,320 @@
+.pageWrapper {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #333333;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Scroll Reveal animation wrappers */
+.revealWrapper {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.9s cubic-bezier(0.215, 0.61, 0.355, 1),
+        transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.revealActive {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Commercial Hero */
+.heroSection {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 200px 0 170px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.heroContainer {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.heroTitle {
+    font-size: 38px;
+    font-weight: 850;
+    line-height: 1.35;
+    margin: 0 0 25px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+/* Fade in bottom to top, 1s delay */
+.heroSubtitle {
+    font-size: 17.5px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 35px;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 1s;
+}
+
+/* Stagger button entry at 1.3s */
+.heroBtn {
+    background-color: #6da203;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 38px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    box-shadow: 0 4px 15px rgba(109, 162, 3, 0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 1.3s;
+}
+
+.heroBtn:hover {
+    background-color: #5b8702;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Benefits Section */
+.benefitsSection {
+    background-color: #ffffff;
+    padding: 95px 0 100px;
+}
+
+.sectionTitle {
+    font-size: 32px;
+    font-weight: 800;
+    color: #131e42;
+    text-align: center;
+    margin: 0 0 65px;
+    line-height: 1.3;
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+}
+
+.benefitCard {
+    padding: 20px 45px;
+    border-right: 1.5px solid rgba(19, 30, 66, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.benefitCard:last-child {
+    border-right: none;
+}
+
+.benefitIcon {
+    font-size: 40px;
+    color: #131e42;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.benefitTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #131e42;
+    margin: 0 0 15px;
+    line-height: 1.4;
+}
+
+.benefitDesc {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #666666;
+    margin: 0;
+}
+
+/* Requirements Section */
+.requirementsSection {
+    background-color: #ffffff;
+    padding: 0 0 110px;
+}
+
+.requirementsGrid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 60px;
+    align-items: flex-start;
+    /* Align top for clean accordion start */
+}
+
+.reqLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.reqHeading {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #131e42;
+    margin: 0 0 25px;
+}
+
+.reqText {
+    font-size: 15px;
+    color: #666666;
+    margin: 0 0 20px;
+    line-height: 1.7;
+}
+
+.reqSubText {
+    font-size: 15.5px;
+    font-weight: 600;
+    color: #131e42;
+    margin: 0 0 25px;
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.accordionContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.checkItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f7f9fc;
+    padding: 17px 22px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.checkItem:hover {
+    background-color: #f1f4f8;
+}
+
+.caretIcon {
+    color: #131e42;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.checkText {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #131e42;
+}
+
+/* Smooth expanding description block */
+.accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.contentOpen {
+    max-height: 200px;
+    /* Adjust as needed for largest text */
+}
+
+.accordionDescription {
+    padding: 18px 22px 10px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #555555;
+    margin: 0;
+}
+
+.reqRight {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Dotted decorator behind image */
+.gridDecorator {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -25px;
+    bottom: -30px;
+    background-image: radial-gradient(#ccc 2px, transparent 2px);
+    background-size: 15px 15px;
+    z-index: 1;
+}
+
+.imageWrapper {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.workerImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .benefitCard {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .benefitCard {
+        border-right: none;
+        border-bottom: 1.5px solid rgba(19, 30, 66, 0.2);
+        padding-bottom: 25px;
+    }
+
+    .benefitCard:last-child {
+        border-bottom: none;
+    }
+
+    .requirementsGrid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .reqHeading {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .reqText,
+    .reqSubText {
+        text-align: center;
+    }
+}

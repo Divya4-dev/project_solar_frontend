@@ -1,0 +1,176 @@
+.whatOfferSection {
+    background-color: #131e42;
+    /* Deep blue background as seen in screenshot */
+    padding: 90px 0;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.textColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.tagline {
+    color: #f95f26;
+    /* orange accent text tagline */
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.headingTitle {
+    font-size: 38px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 20px;
+    line-height: 1.25;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.listIcon {
+    color: #6da203;
+    /* Lime green checkmarks */
+    font-size: 20px;
+}
+
+.buttonWrapper {
+    display: flex;
+}
+
+/* Custom scrolling hover button */
+.scrollBtn {
+    height: 48px;
+    overflow: hidden;
+    position: relative;
+    background-color: #0b375b;
+    /* Dark blue button background */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s, transform 0.1s;
+    outline: none;
+    display: inline-block;
+    width: 200px;
+}
+
+.scrollBtn:hover {
+    background-color: #082944;
+}
+
+.scrollBtn:active {
+    transform: scale(0.98);
+}
+
+.btnTextContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 96px;
+    /* 48px * 2 */
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.btnText {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    color: #ffffff;
+}
+
+.imageColumn {
+    width: 100%;
+}
+
+.imageWrapper {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .imageColumn {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .headingTitle {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    .list {
+        align-items: center;
+    }
+
+    .buttonWrapper {
+        justify-content: center;
+    }
+}
