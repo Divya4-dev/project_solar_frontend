@@ -12,7 +12,7 @@ const AboutPage = () => {
         <>
             <Header />
             <Navbar />
-            {/* Reusable Detailing of the SSB Section */}
+            {/* Reusable Detailing of the SBB Section */}
             <div style={{ padding: '85px 0 100px', backgroundColor: '#ffffff' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
                     <SsbDetail />

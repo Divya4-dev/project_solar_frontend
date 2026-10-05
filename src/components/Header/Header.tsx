@@ -6,20 +6,20 @@ const Header = () => {
         <div className={styles.topbar}>
             <div className={styles.container}>
                 <div className={styles.contactInfo}>
-                    <a href="tel:+919171767255" className={styles.infoLink}>
+                    <a href="tel:+918889619863" className={styles.infoLink}>
                         <FaPhoneAlt className={styles.icon} />
-                        <span>+91 9171767255</span>
+                        <span>+91 8889619863</span>
                     </a>
-                    <a href="mailto:info@ssbsolarenergy.com" className={styles.infoLink}>
+                    <a href="mailto:sbbsolarservice@gmail.com" className={styles.infoLink}>
                         <FaEnvelope className={styles.icon} />
-                        <span>info@ssbsolarenergy.com</span>
+                        <span>sbbsolarservice@gmail.com</span>
                     </a>
                 </div>
                 <div className={styles.socialLinks}>
                     <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Facebook">
                         <FaFacebookF />
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Instagram">
+                    <a href="https://www.instagram.com/sbb_solar?stkn=NXBkb3R3dGdmeXFv" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Instagram">
                         <FaInstagram />
                     </a>
                     <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">

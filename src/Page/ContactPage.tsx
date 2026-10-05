@@ -70,7 +70,7 @@ const ContactPage = () => {
                                 <FaPhoneAlt className={styles.infoIcon} />
                             </div>
                             <h3 className={styles.cardTitle}>Call Us</h3>
-                            <p className={styles.cardContent}>+91 9171767255</p>
+                            <p className={styles.cardContent}>+91 8889619863</p>
                         </div>
 
                         {/* Email Card */}
@@ -79,7 +79,7 @@ const ContactPage = () => {
                                 <FaEnvelope className={styles.infoIcon} />
                             </div>
                             <h3 className={styles.cardTitle}>Email Us</h3>
-                            <p className={styles.cardContent}>info@ssbsolarenergy.com</p>
+                            <p className={styles.cardContent}>sbbsolarservice@gmail.com</p>
                         </div>
 
                         {/* Location Card */}
@@ -89,7 +89,7 @@ const ContactPage = () => {
                             </div>
                             <h3 className={styles.cardTitle}>Our Location</h3>
                             <p className={styles.cardContent}>
-                                01, Siddharth Garden Colony, Near Aura Mall, Gulmohar, Bawadiya Kalan, Bhopal (M.P.)
+                                Ramleela Square Vidisha (M.P.)
                             </p>
                         </div>
                     </div>
@@ -103,13 +103,13 @@ const ContactPage = () => {
                         {/* Left column: Google Map */}
                         <div className={styles.mapContainer}>
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1833.8247071727725!2d77.43702!3d23.183204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c43df793c94ff%3A0xa19c585c5dfed921!2sSSB%20Solar%20Energy!5e0!3m2!1sen!2sin!4v1629892019934!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.6496357!2d77.81057!3d23.53075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c05423e9c34a9%3A0x1bf1a97f10975848!2sShri%20Banke%20Bihari%20Solar%20Service!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0, minHeight: "450px" }}
                                 allowFullScreen={true}
                                 loading="lazy"
-                                title="SSB Solar Energy Location"
+                                title="SBB Solar Service Location"
                             ></iframe>
                         </div>
 

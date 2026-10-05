@@ -2,6 +2,8 @@ import { useState } from 'react';
 import styles from './NavBar.module.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
+import logoImg from '../../assets/logo.png';
+
 const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -21,25 +23,10 @@ const NavBar = () => {
             <div className={styles.container}>
                 {/* Logo Section */}
                 <div className={styles.logoSection}>
-                    <svg width="45" height="40" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.logoIcon}>
-                        {/* Rooftop with Solar panel cells */}
-                        <polygon points="50,10 90,45 80,45 50,18 20,45 10,45" fill="#131e42" />
-
-                        {/* Solar Grid inside */}
-                        <polygon points="50,18 78,43 65,43 45,23" fill="#0056b3" />
-                        <polygon points="42,24 62,43 49,43 35,30" fill="#007bff" />
-                        <polygon points="32,32 46,43 33,43 25,36" fill="#66b2ff" />
-
-                        {/* Leaf on the left */}
-                        <path d="M22 45 C10 32 5 45 5 62 C18 62 25 55 22 45 Z" fill="#70a401" />
-                        <path d="M35 48 C22 38 18 50 18 64 C30 64 35 56 35 48 Z" fill="#8ed002" />
-
-                        {/* Ground link */}
-                        <rect x="5" y="65" width="90" height="4" rx="2" fill="#131e42" />
-                    </svg>
+                    <img src={logoImg} alt="SBB Solar Logo" className={styles.logoImg} />
                     <div className={styles.logoTextContainer}>
-                        <span className={styles.logoSsb}>SSB</span>
-                        <span className={styles.logoSolar}>SOLAR ENERGY</span>
+                        <span className={styles.logoSsb}>SBB</span>
+                        <span className={styles.logoSolar}>SOLAR SERVICE</span>
                     </div>
                 </div>
 

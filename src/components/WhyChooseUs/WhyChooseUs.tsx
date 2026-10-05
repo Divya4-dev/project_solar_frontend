@@ -31,10 +31,10 @@ const WhyChooseUs = () => {
     }, []);
 
     const metrics = [
-        { label: "Ability To Challenge", percentage: 85 },
-        { label: "Expertise", percentage: 90 },
-        { label: "High Commitment", percentage: 95 },
-        { label: "Best Results", percentage: 95 }
+        { label: "Ability To Challenge", percentage: 95 },
+        { label: "Expertise", percentage: 100 },
+        { label: "High Commitment", percentage: 100 },
+        { label: "Best Results", percentage: 100 }
     ];
 
     return (

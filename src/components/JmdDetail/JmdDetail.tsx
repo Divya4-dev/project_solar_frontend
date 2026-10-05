@@ -80,7 +80,7 @@ const JmdDetail = () => {
                         <span className={styles.cursor}>|</span>
                     </h2>
                     <p className={styles.description}>
-                        JMD Solar Energy is India's leading Energy Solution Provider based in Madhya Pradesh with over three decades of experience in power generation. We are committed to promoting the use of renewable energy and with the advent of new technology, we have harnessed the power of solar energy to provide turnkey solutions for power companies.
+                        JMD Solar Service is India's leading Energy Solution Provider based in Madhya Pradesh with over three decades of experience in power generation. We are committed to promoting the use of renewable energy and with the advent of new technology, we have harnessed the power of solar service to provide turnkey solutions for power companies.
                     </p>
 
                     <div className={styles.detailsList}>
@@ -105,7 +105,7 @@ const JmdDetail = () => {
                             <div className={styles.detailText}>
                                 <h3 className={styles.detailTitle}>Our Vision</h3>
                                 <p className={styles.detailDesc}>
-                                    Our vision is to create a cleaner, more sustainable future by helping individuals and businesses transition to solar energy. We believe that solar energy is the key to reducing our dependence on fossil fuels and promoting a more sustainable way of life.
+                                    Our vision is to create a cleaner, more sustainable future by helping individuals and businesses transition to solar service. We believe that solar service is the key to reducing our dependence on fossil fuels and promoting a more sustainable way of life.
                                 </p>
                             </div>
                         </div>

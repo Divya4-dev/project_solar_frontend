@@ -92,7 +92,7 @@ const ServiceDetail = () => {
                         <span className={styles.cursor}>|</span>
                     </h2>
                     <p className={styles.description}>
-                        Unlock the power of the sun with our cutting-edge solar energy services. We specialize in harnessing clean, renewable energy to illuminate your path towards sustainability. Our expert team designs and installs state-of-the-art solar solutions tailored to meet your unique needs. From residential rooftops to commercial facilities, we empower you to reduce your carbon footprint while enjoying significant cost savings. Embrace the future of energy with confidence, knowing that our reliable solar services are paving the way for a brighter, greener tomorrow. Make the switch to solar today and join the movement towards a cleaner, more sustainable energy landscape.
+                        Unlock the power of the sun with our cutting-edge solar services. We specialize in harnessing clean, renewable energy to illuminate your path towards sustainability. Our expert team designs and installs state-of-the-art solar solutions tailored to meet your unique needs. From residential rooftops to commercial facilities, we empower you to reduce your carbon footprint while enjoying significant cost savings. Embrace the future of energy with confidence, knowing that our reliable solar services are paving the way for a brighter, greener tomorrow. Make the switch to solar today and join the movement towards a cleaner, more sustainable energy landscape.
                     </p>
                 </div>
             </div>

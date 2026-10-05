@@ -15,32 +15,32 @@ const ServicesSection = ({ showLoadMore = true }: ServicesSectionProps) => {
         {
             image: serviceRes,
             title: "Residential and Small Utility",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+            desc: "Reliable solar solutions for homes, apartments, and small utility applications. Reduce electricity costs and generate clean, sustainable energy with professionally designed solar systems."
         },
         {
             image: servicePhoto,
             title: "Photovoltaic Modules",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+            desc: "High-quality photovoltaic modules designed to deliver efficient and consistent solar power. Our panels are suitable for residential, commercial, and utility-scale installations."
         },
         {
             image: serviceGrid,
             title: "Grid Connected Solar System",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+            desc: "Connect your solar system to the power grid and maximize your energy savings. Our grid-connected solutions help reduce electricity bills while efficiently utilizing solar energy."
         },
         {
             image: serviceBattery,
             title: "Battery Based Solar System",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+            desc: "Store excess solar energy and use it when you need it. Our battery-based systems provide reliable backup power and help maintain energy availability during power outages."
         },
         {
             image: serviceEpc,
             title: "Solar EPC",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+            desc: "Complete Engineering, Procurement, and Construction services for solar projects. From system design and equipment selection to installation and commissioning, we manage the entire project."
         },
         {
             image: serviceRooftop,
             title: "Solar Rooftop Panel",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+            desc: "Make the most of your rooftop with an efficient solar power system. Our rooftop solutions are designed to reduce electricity costs and provide clean energy for homes and businesses."
         }
     ];
 

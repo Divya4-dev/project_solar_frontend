@@ -125,7 +125,7 @@ const ResidentialPage = () => {
                                 </div>
                                 <h3 className={styles.highlightTitle}>Free Support</h3>
                                 <p className={styles.highlightDesc}>
-                                    Get professional, no-cost support for all your solar energy needs. Trust us for reliable assistance.
+                                    Get professional, no-cost support for all your solar service needs. Trust us for reliable assistance.
                                 </p>
                             </div>
                         </div>
@@ -145,7 +145,7 @@ const ResidentialPage = () => {
                                     3D Design
                                 </h2>
                                 <p className={styles.surveyText}>
-                                    At SSB Solar Energy, we offer a free rooftop survey and 3D design service for homeowners interested in installing a solar power system. Our team will inspect your rooftop to assess its suitability for solar panel installation, and create a customised 3D design that shows you exactly how your solar panels will look and perform on your rooftop.
+                                    At SBB Solar Service, we offer a free rooftop survey and 3D design service for homeowners interested in installing a solar power system. Our team will inspect your rooftop to assess its suitability for solar panel installation, and create a customised 3D design that shows you exactly how your solar panels will look and perform on your rooftop.
                                 </p>
                                 <p className={styles.surveyText}>
                                     This service is provided free of charge to help you make an informed decision about whether solar power is right for you. With our expert advice and guidance, you can be sure that your solar power system is designed to meet your specific needs and maximise energy production.
@@ -181,7 +181,7 @@ const ResidentialPage = () => {
                     <div className={styles.container}>
                         <div className={styles.whyHeader}>
                             <span className={styles.whySubtitle}>Why choose us?</span>
-                            <h2 className={styles.whyTitle}>BENEFITS OF GOING SOLAR WITH SSB SOLAR ENERGY</h2>
+                            <h2 className={styles.whyTitle}>BENEFITS OF GOING SOLAR WITH SBB SOLAR SERVICE</h2>
                             <p className={styles.whyIntro}>
                                 Our company is dedicated to providing exceptional services, aimed at bringing solar power to homes across the entire country.
                             </p>

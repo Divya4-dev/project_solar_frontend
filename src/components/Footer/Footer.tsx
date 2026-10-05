@@ -1,5 +1,6 @@
 import styles from './Footer.module.css';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import logoImg from '../../assets/logo.png';
 
 const Footer = () => {
     return (
@@ -9,25 +10,20 @@ const Footer = () => {
                     {/* Column 1: Logo & Text */}
                     <div className={styles.col1}>
                         <div className={styles.logoContainer}>
-                            <svg className={styles.logoIcon} viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10,65 L50,15 L90,65 Z" fill="none" stroke="#ffffff" strokeWidth="8" strokeLinejoin="miter" />
-                                <path d="M22,65 L50,30 L78,65 Z" fill="#8ed002" />
-                                <circle cx="50" cy="52" r="6" fill="#ffffff" />
-                                <rect x="42" y="65" width="16" height="8" rx="2" fill="#ffffff" />
-                            </svg>
+                            <img src={logoImg} alt="SBB Solar Logo" style={{ height: '48px', objectFit: 'contain' }} />
                             <div className={styles.logoTextWrapper}>
-                                <span className={styles.logoTitle}>SSB</span>
-                                <span className={styles.logoSubtitle}>SOLAR ENERGY</span>
+                                <span className={styles.logoTitle}>SBB</span>
+                                <span className={styles.logoSubtitle}>SOLAR SERVICE</span>
                             </div>
                         </div>
                         <p className={styles.aboutText}>
-                            SSB Solar Energy has one of The Best Solar Energy Panel Installer in India.
+                            SBB Solar Service has one of The Best Solar Panel Installer in India.
                         </p>
                         <div className={styles.socials}>
                             <a href="#" className={styles.socialIcon} aria-label="Facebook">
                                 <FaFacebookF />
                             </a>
-                            <a href="#" className={styles.socialIcon} aria-label="Instagram">
+                            <a href="https://www.instagram.com/sbb_solar?stkn=NXBkb3R3dGdmeXFv" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
                                 <FaInstagram />
                             </a>
                             <a href="#" className={styles.socialIcon} aria-label="LinkedIn">
@@ -66,15 +62,15 @@ const Footer = () => {
                         <ul className={styles.contactList}>
                             <li className={styles.contactItem}>
                                 <FaMapMarkerAlt className={styles.contactIcon} />
-                                <span>01, Siddharth Garden Colony, Near Aura Mall, Gulmohar, Bawadiya Kalan, Bhopal (M.P.)</span>
+                                <span>Ramleela Square Vidisha (M.P.)</span>
                             </li>
                             <li className={styles.contactItem}>
                                 <FaEnvelope className={styles.contactIcon} />
-                                <a href="mailto:info@ssbsolarenergy.com">info@ssbsolarenergy.com</a>
+                                <a href="mailto:sbbsolarservice@gmail.com">sbbsolarservice@gmail.com</a>
                             </li>
                             <li className={styles.contactItem}>
                                 <FaPhoneAlt className={styles.contactIcon} />
-                                <a href="tel:+919171767255">+91 9171767255</a>
+                                <a href="tel:+918889619863">+918889619863</a>
                             </li>
                         </ul>
                     </div>
@@ -85,7 +81,7 @@ const Footer = () => {
             <div className={styles.bottomBar}>
                 <div className={styles.container}>
                     <p className={styles.copyright}>
-                        Copyright © 2023 SSB Solar Energy, All rights reserved.
+                        Copyright © 2023 SBB Solar Service, All rights reserved.
                     </p>
                 </div>
             </div>

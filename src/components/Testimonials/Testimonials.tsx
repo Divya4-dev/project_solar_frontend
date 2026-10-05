@@ -4,15 +4,15 @@ import { FaQuoteRight } from 'react-icons/fa';
 const Testimonials = () => {
     const reviews = [
         {
-            name: "Gangotri Soni",
+            name: "Ram Bai Rathore",
             text: "Superb solar panel installation! Saved bucks on bills. Excellent service, highly recommend this company!"
         },
         {
-            name: "Surya Pratap Singh",
+            name: "Jaswant Singh",
             text: "Top-notch solar setup! Cut electricity costs. Great team, hassle-free process, very satisfied."
         },
         {
-            name: "Ashish Tiwari",
+            name: "Satyam Bhargav",
             text: "Amazing solar service! Reduced my carbon footprint. Professional crew, fantastic results, thrilled!"
         }
     ];

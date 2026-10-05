@@ -28,6 +28,14 @@
     flex-shrink: 0;
 }
 
+.logoImg {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
 .logoTextContainer {
     display: flex;
     flex-direction: column;

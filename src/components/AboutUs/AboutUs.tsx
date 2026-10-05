@@ -86,7 +86,7 @@ const AboutUs = () => {
                         </div>
                         <h3 className={styles.benefitTitle}>Save Planet</h3>
                         <p className={styles.benefitText}>
-                            Save the planet, power up your life with sustainable solar energy solutions.
+                            Save the planet, power up your life with sustainable solar service solutions.
                         </p>
                     </div>
 
@@ -104,7 +104,7 @@ const AboutUs = () => {
                         <div className={styles.iconCircle}>
                             <FaSolarPanel />
                         </div>
-                        <h3 className={styles.benefitTitle}>Solar Energy</h3>
+                        <h3 className={styles.benefitTitle}>Solar Service</h3>
                         <p className={styles.benefitText}>
                             Light up your world, preserve the planet, and save energy.
                         </p>
@@ -131,7 +131,7 @@ const AboutUs = () => {
                             <span className={styles.cursor}>|</span>
                         </h2>
                         <p className={styles.description}>
-                            SSB Solar Energy is India’s leading Energy Solution Provider based in Bhopal with over 5+ Year experience in power generation. We are committed to promoting the use of renewable energy and with the advent of new technology, we have harnessed the power of solar energy to provide turnkey solutions for power companies. Our team of experts leverages the latest technology and tools to design, supply and install solar power systems in following areas :
+                            SBB Solar Service is India’s leading Energy Solution Provider based in Bhopal with over 5+ Year experience in power generation. We are committed to promoting the use of renewable energy and with the advent of new technology, we have harnessed the power of solar service to provide turnkey solutions for power companies. Our team of experts leverages the latest technology and tools to design, supply and install solar power systems in following areas :
                         </p>
 
                         <ul className={styles.list}>

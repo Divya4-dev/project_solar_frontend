@@ -21,7 +21,7 @@ const StepsSection = () => {
         {
             num: 4,
             icon: <FaBolt />,
-            text: "Ready to use solar energy"
+            text: "Ready to use solar service"
         }
     ];
 
