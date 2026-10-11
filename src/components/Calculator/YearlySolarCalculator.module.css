@@ -1,0 +1,187 @@
+.cardContainer {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(19, 30, 66, 0.08);
+    padding: 35px;
+    border: 1px solid #e2e8f0;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.headerTitle {
+    color: #131e42;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerSubtitle {
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.calculatorGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+@media (max-width: 768px) {
+    .calculatorGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    color: #131e42;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unitTag {
+    color: #70a401;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 14px;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 12px 14px 12px 38px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #131e42;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.inputField:focus {
+    border-color: #70a401;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(112, 164, 1, 0.15);
+}
+
+.calculateBtn {
+    background-color: #6da203;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(109, 162, 3, 0.25);
+}
+
+.calculateBtn:hover {
+    background-color: #5b8702;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(109, 162, 3, 0.35);
+}
+
+.resultSection {
+    background-color: #f8fafc;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.metricsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.metricCard {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.metricTitle {
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.metricValue {
+    font-size: 20px;
+    font-weight: 800;
+    color: #131e42;
+}
+
+.highlightMetric {
+    background: linear-gradient(135deg, #131e42 0%, #1e293b 100%);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(19, 30, 66, 0.12);
+}
+
+.highlightMetricLabel {
+    font-size: 13px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.highlightMetricValue {
+    font-size: 30px;
+    font-weight: 800;
+    color: #70a401;
+}

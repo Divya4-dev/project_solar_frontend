@@ -6,6 +6,7 @@ import ResidentialPage from "./Page/ResidentialPage";
 import CommercialPage from "./Page/CommercialPage";
 import ContactPage from "./Page/ContactPage";
 import QuotePage from "./Page/QuotePage";
+import CalculatorPage from "./Page/CalculatorPage";
 
 function App() {
   const [page, setPage] = useState("home");
@@ -26,6 +27,8 @@ function App() {
         setPage("contact");
       } else if (pageId === "1039") {
         setPage("quote");
+      } else if (pageId === "calculator" || pageId === "calc") {
+        setPage("calculator");
       } else {
         setPage("home");
       }
@@ -47,6 +50,7 @@ function App() {
       {page === "commercial" && <CommercialPage />}
       {page === "contact" && <ContactPage />}
       {page === "quote" && <QuotePage />}
+      {page === "calculator" && <CalculatorPage />}
       {page === "home" && <Home />}
     </>
   );

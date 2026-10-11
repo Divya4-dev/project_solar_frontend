@@ -1,0 +1,114 @@
+.pageWrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8fafc;
+}
+
+.bannerSection {
+    background-color: #131e42;
+    padding: 60px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bannerHeading {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.cursor {
+    color: #70a401;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.bannerSubtitle {
+    color: #94a3b8;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.calculatorContentSection {
+    padding: 60px 0 100px;
+    flex: 1;
+}
+
+.tabNavigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tabButton {
+    background-color: #ffffff;
+    color: #131e42;
+    border: 2px solid #e2e8f0;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.tabButton:hover {
+    border-color: #70a401;
+    color: #70a401;
+    transform: translateY(-2px);
+}
+
+.activeTab {
+    background-color: #131e42 !important;
+    color: #ffffff !important;
+    border-color: #131e42 !important;
+    box-shadow: 0 6px 20px rgba(19, 30, 66, 0.2) !important;
+}
+
+.activeTabIcon {
+    color: #70a401 !important;
+}
+
+@media (max-width: 768px) {
+    .bannerHeading {
+        font-size: 30px;
+    }
+
+    .tabButton {
+        padding: 12px 20px;
+        font-size: 14px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .calculatorContentSection {
+        padding: 40px 0 60px;
+    }
+}

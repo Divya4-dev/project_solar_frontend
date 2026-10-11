@@ -1,0 +1,281 @@
+.cardContainer {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(19, 30, 66, 0.08);
+    padding: 35px;
+    border: 1px solid #e2e8f0;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.headerTitle {
+    color: #131e42;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerSubtitle {
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.calculatorGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+@media (max-width: 768px) {
+    .calculatorGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    color: #131e42;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unitTag {
+    color: #70a401;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 14px;
+    color: #64748b;
+    font-size: 15px;
+    z-index: 2;
+}
+
+.inputField {
+    width: 100%;
+    padding: 12px 14px 12px 38px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #131e42;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.inputField:focus {
+    border-color: #70a401;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(112, 164, 1, 0.15);
+}
+
+.selectField {
+    width: 100%;
+    padding: 12px 14px 12px 38px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #131e42;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px;
+}
+
+.selectField:focus {
+    border-color: #70a401;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(112, 164, 1, 0.15);
+}
+
+.stepperContainer {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+    align-items: center;
+}
+
+.stepperBtn {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #131e42;
+    width: 42px;
+    height: 44px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+}
+
+.stepperBtn:hover {
+    background-color: #70a401;
+    color: #ffffff;
+    border-color: #70a401;
+}
+
+.calculateBtn {
+    background-color: #6da203;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(109, 162, 3, 0.25);
+}
+
+.calculateBtn:hover {
+    background-color: #5b8702;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(109, 162, 3, 0.35);
+}
+
+.calculateBtn:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.resultSection {
+    background-color: #f8fafc;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #e2e8f0;
+}
+
+.resultCardHeader {
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.resultTitle {
+    color: #131e42;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.monthlyPaymentBox {
+    background: linear-gradient(135deg, #131e42 0%, #1e293b 100%);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(19, 30, 66, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.monthlyPaymentBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #70a401 0%, #ff2c54 100%);
+}
+
+.monthlyPaymentLabel {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.monthlyPaymentValue {
+    font-size: 34px;
+    font-weight: 800;
+    color: #70a401;
+    letter-spacing: 0.5px;
+}
+
+.breakdownGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.breakdownRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 8px 0;
+    border-bottom: 1px dashed #cbd5e1;
+}
+
+.breakdownLabel {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.breakdownValue {
+    color: #131e42;
+    font-weight: 700;
+}
+
+.apiNotice {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+}

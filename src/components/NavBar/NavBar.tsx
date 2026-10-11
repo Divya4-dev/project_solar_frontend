@@ -16,6 +16,7 @@ const NavBar = () => {
     const isServicesPage = window.location.search.includes('page_id=13');
     const isResidentialPage = window.location.search.includes('page_id=1242');
     const isCommercialPage = window.location.search.includes('page_id=1243');
+    const isCalculatorPage = window.location.search.includes('page_id=calculator');
     const isContactPage = window.location.search.includes('page_id=16');
 
     return (
@@ -75,6 +76,15 @@ const NavBar = () => {
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             COMMERCIAL
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="/?page_id=calculator"
+                            className={`${styles.navLink} ${isCalculatorPage ? styles.activeLink : ''}`}
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            CALCULATOR
                         </a>
                     </li>
                     <li>
