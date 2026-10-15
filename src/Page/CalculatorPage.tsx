@@ -11,7 +11,10 @@ import { FaCalculator, FaSun } from 'react-icons/fa';
 type SubsectionTab = 'emi' | 'yearly';
 
 const CalculatorPage: React.FC = () => {
-    const [activeTab, setActiveTab] = useState<SubsectionTab>('emi');
+    const [activeTab, setActiveTab] = useState<SubsectionTab>(() => {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('tab') === 'emi' ? 'emi' : 'yearly';
+    });
 
     // Typewriter heading effect consistent with QuotePage
     const bannerText = "Solar Calculators";
@@ -76,27 +79,27 @@ const CalculatorPage: React.FC = () => {
                     {/* Subsection Tabs */}
                     <div className={styles.tabNavigation}>
                         <button
-                            className={`${styles.tabButton} ${activeTab === 'emi' ? styles.activeTab : ''}`}
-                            onClick={() => setActiveTab('emi')}
-                        >
-                            <FaCalculator className={activeTab === 'emi' ? styles.activeTabIcon : ''} />
-                            <span>EMI Calculator</span>
-                        </button>
-
-                        <button
                             className={`${styles.tabButton} ${activeTab === 'yearly' ? styles.activeTab : ''}`}
                             onClick={() => setActiveTab('yearly')}
                         >
                             <FaSun className={activeTab === 'yearly' ? styles.activeTabIcon : ''} />
                             <span>Solar Calculator</span>
                         </button>
+
+                        <button
+                            className={`${styles.tabButton} ${activeTab === 'emi' ? styles.activeTab : ''}`}
+                            onClick={() => setActiveTab('emi')}
+                        >
+                            <FaCalculator className={activeTab === 'emi' ? styles.activeTabIcon : ''} />
+                            <span>Solar EMI Calculator</span>
+                        </button>
                     </div>
 
                     {/* Subsection Content */}
-                    {activeTab === 'emi' ? (
-                        <EmiCalculator />
-                    ) : (
+                    {activeTab === 'yearly' ? (
                         <YearlySolarCalculator />
+                    ) : (
+                        <EmiCalculator />
                     )}
                 </div>
             </section>

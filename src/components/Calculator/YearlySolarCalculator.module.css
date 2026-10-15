@@ -1,187 +1,670 @@
 .cardContainer {
     background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(19, 30, 66, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(19, 30, 66, 0.08);
     padding: 35px;
     border: 1px solid #e2e8f0;
-    max-width: 900px;
+    max-width: 1040px;
     margin: 0 auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.headerTitle {
-    color: #131e42;
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 8px;
+/* Header Section */
+.cardHeader {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
+    margin-bottom: 28px;
 }
 
-.headerSubtitle {
+.iconBadge {
+    background-color: #fef3c7;
+    border: 1px solid #fde68a;
+    border-radius: 12px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.calculatorEmoji {
+    font-size: 26px;
+}
+
+.mainTitle {
+    color: #131e42;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.titleSubEn {
     color: #64748b;
-    font-size: 15px;
-    margin-bottom: 30px;
-    line-height: 1.5;
+    font-weight: 600;
+    font-size: 19px;
 }
 
+.subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* 2-Part Grid: Left Side and Right Side */
 .calculatorGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 32px;
+    align-items: stretch;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
     .calculatorGrid {
         grid-template-columns: 1fr;
+        gap: 28px;
     }
 }
 
-.formSection {
+/* ================= LEFT SIDE STYLES ================= */
+.leftSide {
     display: flex;
     flex-direction: column;
-    gap: 22px;
 }
 
-.formGroup {
+.formContainer {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 20px;
 }
 
-.label {
-    color: #131e42;
-    font-size: 14px;
-    font-weight: 600;
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.billHeaderRow {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.unitTag {
-    color: #70a401;
-    font-size: 13px;
-    font-weight: 600;
+.fieldLabel {
+    color: #131e42;
+    font-size: 14px;
+    font-weight: 700;
 }
 
-.inputWrapper {
+.fieldLabelEn {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.billDisplayAmount {
+    color: #059669;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* Free-entry input field */
+.freeEntryWrapper {
     position: relative;
     display: flex;
     align-items: center;
-}
-
-.inputIcon {
-    position: absolute;
-    left: 14px;
-    color: #64748b;
-    font-size: 15px;
-}
-
-.inputField {
-    width: 100%;
-    padding: 12px 14px 12px 38px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #131e42;
     background-color: #f8fafc;
     border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    outline: none;
+    border-radius: 8px;
     transition: all 0.2s ease;
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
-.inputField:focus {
-    border-color: #70a401;
+.freeEntryWrapper:focus-within {
+    border-color: #10b981;
     background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(112, 164, 1, 0.15);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
 }
 
-.calculateBtn {
-    background-color: #6da203;
-    color: #ffffff;
+.currencySymbol {
+    padding-left: 14px;
     font-size: 16px;
     font-weight: 700;
-    padding: 14px;
+    color: #64748b;
+}
+
+.freeEntryInput {
+    flex: 1;
+    padding: 12px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #131e42;
+    background: transparent;
     border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 12px rgba(109, 162, 3, 0.25);
+    outline: none;
+    width: 100%;
 }
 
-.calculateBtn:hover {
-    background-color: #5b8702;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(109, 162, 3, 0.35);
+.freeEntryInput::-webkit-outer-spin-button,
+.freeEntryInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-.resultSection {
-    background-color: #f8fafc;
-    border-radius: 10px;
-    padding: 25px;
+.freeEntryInput[type=number] {
+    -moz-appearance: textfield;
+}
+
+.entryUnit {
+    padding-right: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+/* Range Slider */
+.sliderContainer {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    border: 1px solid #e2e8f0;
+    gap: 6px;
+    margin-top: 4px;
 }
 
-.metricsGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+.rangeSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.1s ease;
 }
 
-.metricCard {
-    background-color: #ffffff;
+.rangeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #059669;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.rangeSlider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.rangeSlider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #059669;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.sliderTicks {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+/* Electricity Tariff Section */
+.tariffSection {
+    background-color: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
-    padding: 16px;
+    padding: 14px 16px;
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.metricTitle {
-    font-size: 12px;
-    font-weight: 700;
-    color: #64748b;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.tariffRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.metricValue {
-    font-size: 20px;
-    font-weight: 800;
-    color: #131e42;
+.tariffLabelWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.highlightMetric {
-    background: linear-gradient(135deg, #131e42 0%, #1e293b 100%);
-    color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 6px 16px rgba(19, 30, 66, 0.12);
+.infoIcon {
+    color: #3b82f6;
+    font-size: 15px;
+    flex-shrink: 0;
 }
 
-.highlightMetricLabel {
+.tariffLabel {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.tariffInputWrapper {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 4px 8px;
+    gap: 4px;
+}
+
+.tariffInputWrapper:focus-within {
+    border-color: #10b981;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15);
+}
+
+.rupeeTag {
     font-size: 13px;
     font-weight: 600;
-    color: #94a3b8;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
+    color: #64748b;
 }
 
-.highlightMetricValue {
-    font-size: 30px;
+.tariffInput {
+    width: 52px;
+    padding: 4px 2px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #131e42;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.tariffUnit {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.tariffDisclaimer {
+    font-size: 11px;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Assumptions Card (Fixed & Uneditable) */
+.assumptionsCard {
+    background-color: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.assumptionsHeader {
+    display: flex;
+    align-items: center;
+}
+
+.assumptionTitle {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #92400e;
+}
+
+.assumptionTitleEn {
+    font-size: 12px;
+    font-weight: 500;
+    color: #b45309;
+}
+
+.assumptionsList {
+    margin: 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12.5px;
+    color: #78350f;
+    line-height: 1.5;
+}
+
+.fixedNotice {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #059669;
+    margin-top: 2px;
+    padding-top: 6px;
+    border-top: 1px dashed #fde68a;
+}
+
+.fixedNoticeIcon {
+    font-size: 12px;
+    color: #059669;
+}
+
+.errorBanner {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #dc2626;
+    font-weight: 500;
+}
+
+/* Calculate Savings Button */
+.calculateSavingsBtn {
+    background-color: #6da203;
+    color: #ffffff;
+    font-size: 15.5px;
+    font-weight: 700;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 14px rgba(109, 162, 3, 0.3);
+    transition: all 0.2s ease;
+}
+
+.calculateSavingsBtn:hover {
+    background-color: #5b8702;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(109, 162, 3, 0.4);
+}
+
+.calculateSavingsBtn:active {
+    transform: translateY(0);
+}
+
+.btnIcon {
+    font-size: 15px;
+}
+
+/* ================= RIGHT SIDE STYLES ================= */
+.rightSide {
+    display: flex;
+    flex-direction: column;
+}
+
+.recommendationContainer {
+    background-color: #0e2720;
+    border: 1px solid #1a3f33;
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-shadow: 0 10px 30px rgba(14, 39, 32, 0.25);
+    min-height: 440px;
+    justify-content: flex-start;
+}
+
+.recommendationHeader {
+    font-size: 12.5px;
     font-weight: 800;
-    color: #70a401;
+    color: #f59e0b;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+}
+
+.recHeaderEn {
+    color: #fbbf24;
+    opacity: 0.85;
+}
+
+/* Calculated Results Content */
+.resultsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.metricsTwoCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.metricCard {
+    background-color: #16372d;
+    border: 1px solid #234d3f;
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.metricCardTitle {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.capacityHighlight {
+    font-size: 28px;
+    font-weight: 800;
+    color: #facc15;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.unitText {
+    font-size: 18px;
+    font-weight: 700;
+    color: #facc15;
+}
+
+.areaHighlight {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.metricCardSubtitle {
+    font-size: 11px;
+    color: #64748b;
+}
+
+/* Estimated Yearly Savings Card */
+.savingsCard {
+    background-color: #143229;
+    border: 1px solid #224b3d;
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+@media (max-width: 480px) {
+    .savingsCard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.savingsTextGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.savingsLabel {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.savingsFormula {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.savingsValue {
+    font-size: 24px;
+    font-weight: 800;
+    color: #22c55e;
+    white-space: nowrap;
+}
+
+/* Ask for a Quotation Button */
+.askQuoteBtn {
+    background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.askQuoteBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+    filter: brightness(1.05);
+}
+
+.askQuoteBtn:active {
+    transform: translateY(0);
+}
+
+.arrowIcon {
+    font-size: 14px;
+}
+
+/* Disclaimer text */
+.disclaimerText {
+    font-size: 10.5px;
+    line-height: 1.5;
+    color: #94a3b8;
+    display: flex;
+    gap: 6px;
+    align-items: flex-start;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 12px;
+}
+
+.disclaimerIcon {
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+/* Placeholder State when calculation not run yet */
+.placeholderState {
+    padding: 24px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    margin: auto 0;
+}
+
+.placeholderIconWrapper {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: rgba(245, 158, 11, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholderSunIcon {
+    font-size: 28px;
+    color: #fbbf24;
+}
+
+.placeholderHeading {
+    font-size: 17px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0;
+}
+
+.placeholderText {
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 340px;
+}
+
+.placeholderDashedBox {
+    border: 1px dashed #234d3f;
+    border-radius: 8px;
+    padding: 12px 16px;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+    font-size: 12px;
+    color: #cbd5e1;
+    background-color: rgba(22, 55, 45, 0.4);
+}
+
+.previewItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.previewDot {
+    color: #10b981;
+    font-weight: bold;
 }
